@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import BlogPage from './components/BlogPage';
@@ -10,7 +10,7 @@ import ParticleCanvas from './components/ParticleCanvas';
 function App() {
 	return (
 		<div className="relative bg-background">
-			<BrowserRouter>
+			<Router>
 				<Header />
 				<ParticleCanvas />
 				<Routes>
@@ -19,7 +19,7 @@ function App() {
 					<Route path="/blog/:postId" element={<BlogPost />} />
 				</Routes>
 				<Footer />
-			</BrowserRouter>
+			</Router>
 		</div>
 	);
 }
